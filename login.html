@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--Menu-->
+    <nav class="navbar navbar-light bg-light m-0 p-0">
+        <div class="start-0 m-0 p-0">
+            <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="container col-1 m-0 p-0">
+            <a href="index.html">
+                <img class="img-fluid m-0 p-0" src="media/logo/logo-min.png" alt="logo">
+            </a>
+        </div>
+        <div class="end-100 m-0 p-0">
+            <a href="register.html">
+                <p class="btn  m-0 p-2">Register</p>
+            </a>
+            <a href="login.html">
+                <p class="btn  m-0 p-2">Login</p>
+            </a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+                <li><a class="text-dark" href="article.html">Article</a></li>
+                <li><a class="text-dark" href="products.html">Products</a>
+                    <ul>
+                        <li><a class="text-dark" href="product.html">Product</a></li>
+                    </ul>
+                </li>
+                <li><a class="text-dark" href="register.html">Register</a>
+                    <ul>
+                        <li><a class="text-dark" href="login.html">Login</a></li>
+                    </ul>
+                </li>
+                <li><a class="text-dark" href="dashboard.html">*Dashboard</a></li>
+                <li><a class="text-dark" href="stock.html">*Stock</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Main-->
+    <div class="color_2 p-5">
+        <div class="color_4 p-3">
+            <div class="container">
+                <div class="row">
+                    <div class="d-none d-xl-block col-xl-3 col-xxl-3">
+                        <img src="media/product/vertical(9).jpg" class="image" alt="left login image">
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
+                        <h1 class="text-center">Login</h1>
+                        <!--Login form-->
+                        <form>
+                            <div class="mb-3 text-center">
+                                <label for="login" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="login" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Keep me signed</label>
+                            </div>
+                            <p class="text-center">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="d-none d-xl-block col-xl-3 col-xxl-3">
+                        <img src="media/product/vertical(17).jpg" class="image" alt="right login image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

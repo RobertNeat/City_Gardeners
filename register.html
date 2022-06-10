@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="maxBorn()">
+    <!--Menu-->
+    <nav class="navbar navbar-light bg-light m-0 p-0">
+        <div class="start-0 m-0 p-0">
+            <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="container col-1 m-0 p-0">
+            <a href="index.html">
+                <img class="img-fluid m-0 p-0" src="media/logo/logo-min.png" alt="logo">
+            </a>
+        </div>
+        <div class="end-100 m-0 p-0">
+            <a href="register.html">
+                <p class="btn  m-0 p-2">Register</p>
+            </a>
+            <a href="login.html">
+                <p class="btn  m-0 p-2">Login</p>
+            </a>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+                <li><a class="text-dark" href="article.html">Article</a></li>
+                <li><a class="text-dark" href="products.html">Products</a>
+                    <ul>
+                        <li><a class="text-dark" href="product.html">Product</a></li>
+                    </ul>
+                </li>
+                <li><a class="text-dark" href="register.html">Register</a>
+                    <ul>
+                        <li><a class="text-dark" href="login.html">Login</a></li>
+                    </ul>
+                </li>
+                <li><a class="text-dark" href="dashboard.html">*Dashboard</a></li>
+                <li><a class="text-dark" href="stock.html">*Stock</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Main-->
+    <div class="color_2 p-5">
+        <div class="color_4 p-3">
+            <div class="container">
+                <div class="row">
+                    <!--left-->
+                    <div class="d-none d-xl-block col-xl-3 col-xxl-3" >
+                        <div class="register-left">
+                            <img src="media/product_homepage/1x1/vertical(10).jpg" class="register-image" alt="image 2">
+                        </div>
+                    </div>
+
+                    <!--Form-->
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
+                        <h1 class="text-center">Register</h1>
+                        <form class="was-validated" onsubmit="displayData()">
+                            <!--Name-->
+                            <div class="mb-3">
+                                <input type="text" class="form-control text-center" id="name" placeholder="Name"
+                                    pattern="^[a-zA-Z]{1,20}$" required>
+                                <div class="invalid-feedback">Your name - consists only of A-Z,a-z</div>
+                            </div>
+
+                            <!--Surname-->
+                            <div class="mb-3">
+                                <input type="text" class="form-control text-center" id="surname" placeholder="Surname"
+                                    pattern="^[a-zA-Z]{1,20}$" required>
+                                <div class="invalid-feedback">Your surname - consists only of A-Z,a-z</div>
+                            </div>
+
+                            <!--Gender-->
+                            <div class="row mb-3">
+                                <div class="col-6 text-center">Gender</div>
+                                <div class="col-6">
+                                    <select class="form-select" id="gender" onclick="hidePronounGender()">
+                                        <option value="1">Other</option>
+                                        <option value="2">Men</option>
+                                        <option value="3">Women</option>
+                                    </select>
+                                    <div class="invalid-feedback">Choose your gender</div>
+                                </div>
+                            </div>
+
+                            <!--pronoun-->
+                            <div class="input-group mb-3" id="sectionPronoun">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="checkbox" id="pronounCheck"
+                                        onclick="checkPronoun()">
+                                </div>
+                                <input type="text" class="form-control text-center" placeholder="Pronoun"
+                                    id="textPronoun">
+                                <div class="invalid-feedback">Specify your pronoun (eg. "it/its")</div>
+                            </div>
+
+                            <!--gender-->
+                            <div class="input-group mb-3" id="sectionGender">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="checkbox" id="genderCheck"
+                                        onclick="checkGender()">
+                                </div>
+                                <input type="text" class="form-control text-center" placeholder="Gender"
+                                    id="textGender">
+                                <div class="invalid-feedback">Specify your gender (eg. "asex")</div>
+                            </div>
+
+                            <!--Nickname-->
+                            <div class="mb-3">
+                                <input type="text" class="form-control text-center" id="nick" placeholder="Nickname"
+                                    pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+                                <div class="invalid-feedback">Nickname contains (a-z A-Z 0-9 _ . )</div>
+                            </div>
+
+                            <!--Borndate-->
+                            <div class="mb-3">
+                                <input type="date" class="form-control text-center mb-3" id="birthday" name="birthday">
+                            </div>
+
+                            <!--Phone_number-->
+                            <div class="mb-3">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone number 000-000-000"
+                                    class="form-control text-center mb-3" pattern="^[0-9]{3}[- ]?[0-9]{3}[- ]?[0-9]{3}$"
+                                    required>
+                                <div class="invalid-feedback">Phone number in format "000-000-000" or "000 000 000" or
+                                    "000000000"</div>
+                            </div>
+
+                            <!--Email-->
+                            <div class="mb-3">
+                                <input type="email" class="form-control text-center" id="email" placeholder="Email"
+                                    required>
+                                <div class="invalid-feedback">example@domain.com</div>
+                            </div>
+
+                            <!--Password-->
+                            <div class="mb-3">
+                                <input type="password" class="form-control text-center" id="password"
+                                    placeholder="Password" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,32}$"
+                                    required>
+                                <div class="invalid-feedback">
+                                    <ul>
+                                        <li>At least one digit [0-9]</li>
+                                        <li>At least one lowercase character [a-z]</li>
+                                        <li>At least one uppercase character [A-Z]</li>
+                                        <li>At least 8 characters in length, but no more than 32.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!--Repeat password-->
+                            <div class="mb-3">
+                                <input type="password" class="form-control text-center" id="password2"
+                                    placeholder="Repeat password" onfocusout="return checkPasswordMatch()" required>
+                                <div class="invalid-feedback">Passwords must match</div>
+                            </div>
+
+                            <!--terms/buttons-->
+                            <div class="row">
+                                <div class="col-6">
+                                    <!--terms of service-->
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="terms" required>
+                                        <label class="form-check-label"><a href="#">Terms of service</a></label>
+                                    </div>
+                                </div>
+                                <div class="col-6"></div>
+                            </div>
+
+                            <!--marketing-->
+                            <div class="row">
+                                <div class="col-6">
+                                    <!--markeing-->
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="marketing">
+                                        <label class="form-check-label"><a href="#">Marketing</a></label>
+                                    </div>
+                                </div>
+                                <div class="col-6"></div>
+                            </div>
+
+                            <!--submit-->
+                            <div class="row text-center">
+                                <div class="col-6"></div>
+                                <div class="col-6">
+                                    <!--submit-->
+                                    <button type="submit" class="btn btn-primary btn-lg mb-3 w-100">Submit</button>
+                                </div>
+                            </div>
+
+                            <!--reset-->
+                            <div class="row text-center">
+                                <div class="col-6"></div>
+                                <div class="col-6">
+                                    <!--reset-->
+                                    <button type="button" class="btn btn-outline-primary btn-sm mb-3 w-75"
+                                        onclick="resetForms()">Reset</button>
+                                </div>
+                            </div>
+                            <!--##-->
+                            <!--<input class="btn btn-primary btn-lg mb-3 w-100" type="submit" value="Submit" onclick="displayData()">-->
+                        </form>
+                    </div>
+
+                    <!--right-->
+                    <div class="d-none d-xl-block col-xl-3 col-xxl-3">
+                        <div class="register-right">
+                            <img src="media/product/vertical(2).jpg" class="register-image register-right-img1" alt="image 1">
+                            <img src="media/product/vertical(1).jpg" class="register-image register-right-img2" alt="image 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
