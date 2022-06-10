@@ -28,4 +28,5 @@ Works best with Visual Studio Code and live server. And finally grid system, so 
 All images are downloaded from unsplash.com (on free to use license), project isn't commericial - but it could be changed if necessary. Logo is created personally so it has no license connotation outside of this project. Website mackup is created using figma (can be accessed in "info/figma-prototype").
 
 ![Products](info/snippet_3.png)
+
 Copyright Robert Neat 06.2022
