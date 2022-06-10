@@ -1,0 +1,79 @@
+/*----------------colors----------------*/
+.color_1{   background-color: #99c5ff;}
+.color_2{   background-color: #b3d6ff;}
+.color_3{   background-color: #cce4ff;}
+.color_4{   background-color: #e6f2ff;}
+.bg-grey {background-color: rgba(0, 0, 0, 0.2);}
+/*------widget------*/
+.widget{
+  position: relative;
+  height: 35em;
+}
+
+.wdgt-big{
+  position: absolute;
+  left: 25%;
+  top: 0%;
+
+  width: 75%;
+  height: 100%;
+}
+
+.square{
+  position: absolute;
+  width: 25%;
+  height: 25%;
+}
+
+.move-0{  left: 0%;top: 0%;}
+.move-25{ left: 0%;top: 25%;}
+.move-50{ left: 0%;top: 50%;}
+.move-75{ left: 0%;top: 75%;}
+/*--------------------------*/
+.image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.author-image {
+  border-radius: 50%;
+}
+
+.author-name {
+  padding-top: 30%;
+}
+
+.btn-buy {
+  padding-left: 5em;
+  padding-right: 5em;
+  margin: 1em;
+}
+
+.register-image{
+  height: auto;
+  width: 100%;
+}
+
+.register-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.register-right{
+  height: 100%;
+  position:relative;
+}
+
+.register-right-img1{
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+.register-right-img2{
+  position:absolute;
+  left:0;
+  bottom:0;
+}
