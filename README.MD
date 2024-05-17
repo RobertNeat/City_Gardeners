@@ -5,6 +5,8 @@
 ![JavaScript 6](https://img.shields.io/badge/-JavaScript%206-yellow)
 ![Bootstrap 5](https://img.shields.io/badge/-Bootstrap%20v5.2-blueviolet)
 
+Figma prototype:[city_gardeners](https://www.figma.com/design/nPvXsTfBxH73CmVe1pcwuq/city_gardeners?t=uTpccr6mw96qptYp-1)
+
 # Description:
 Multi page website featuring JSON manipulation and localStorage as well as asynchronous data loading (AJAX) from another git repository. 
 Works best with Visual Studio Code and live server. And finally grid system, so everybody can use website no matter the device.
